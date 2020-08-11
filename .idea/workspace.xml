@@ -20,34 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e6300d3-8729-4f8f-84af-5b1553bf69c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/Active.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Blog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Child.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Course.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/CourseChild.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Child/ChildInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Child/ChildRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Course/CourseInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Course/CourseRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/childs/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/childs/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/childs/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/courses/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/courses/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/courses/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ParentUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ParentUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PermissionRoleSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PermissionRoleSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PermissionSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PermissionSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/RoleSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/RoleSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/dashboards/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/dashboards/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/roles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/roles/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/users/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/users/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/modal/modaldelete.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/modal/modaldelete.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/shared/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/shared/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Client/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Client/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Client/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Client/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -215,7 +192,7 @@
       <updated>1597023083175</updated>
       <workItem from="1597023084658" duration="18904000" />
       <workItem from="1597112142033" duration="10397000" />
-      <workItem from="1597148168018" duration="6105000" />
+      <workItem from="1597148168018" duration="9658000" />
     </task>
     <servers />
   </component>
@@ -268,16 +245,6 @@
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php</url>
           <line>24</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php</url>
-          <line>53</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/auth/register.blade.php</url>
-          <line>107</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/auth/register.blade.php</url>

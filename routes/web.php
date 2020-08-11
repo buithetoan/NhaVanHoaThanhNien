@@ -12,9 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::group(['namespace'=>'Client','prefix'=>'/'],function (){
     Route::get('/home', 'HomeController@index');
+    Route::get('/active', 'HomeController@activePage');
+    Route::get('/course', 'HomeController@coursePage');
+    Route::get('/blog', 'HomeController@blogPage');
 });
 Route::group(['middleware' => ['web']], function () {
     Route::get('login', 'Auth\LoginController@webLogin');

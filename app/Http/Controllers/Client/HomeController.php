@@ -20,8 +20,36 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
+    /* --------------------------------------------------------
+        Home Page
+    --------------------------------------------------------- */
     public function index()
     {
-        return view('home');
+        return view('client.home.home');
+    }
+
+    /* --------------------------------------------------------
+        Active Page
+    --------------------------------------------------------- */
+    public function activePage()
+    {
+        return view('client.active.active');
+    }
+
+    /* --------------------------------------------------------
+        Course Page
+    --------------------------------------------------------- */
+    public function coursePage()
+    {
+        return view('client.course.course');
+    }
+
+    /* --------------------------------------------------------
+        Blog Page
+    --------------------------------------------------------- */
+    public function blogPage()
+    {
+        return view('client.blog.blog');
     }
 }

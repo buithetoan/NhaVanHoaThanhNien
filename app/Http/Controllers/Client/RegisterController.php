@@ -28,7 +28,7 @@ class RegisterController extends Controller
         $this->parentRepository = $parentRepos;
     }
     public  function  showRegister(){
-        return view('auth.register');
+        return view('client.auth.register');
     }
     protected function create(RegisterRequest $request)
     {
@@ -41,7 +41,7 @@ class RegisterController extends Controller
         // Auth::login($user,true);
         $userCreate = $this->userRepository->create($user->toArray());
         // Insert data to role_permission
-        $userCreate->roles()->attach(4);
+        $userCreate->roles()->attach(2);
 
         $parent = new ParentUser([
             'full_name' => $request->full_name,

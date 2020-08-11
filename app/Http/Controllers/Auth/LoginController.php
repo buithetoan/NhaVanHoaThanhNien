@@ -33,7 +33,7 @@ class LoginController extends Controller
     }
     public function webLogin()
     {
-        return view('auth.login');
+        return view('client.auth.login');
     }
 
     public function webLoginPost(LoginRequest $request)
