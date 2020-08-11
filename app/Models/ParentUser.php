@@ -15,4 +15,8 @@ class ParentUser extends Model
     {
         return $this->hasOne('App\Models\User', 'user_id');
     }
+    public function childs()
+    {
+        return $this->hasMany('App\Models\Child');
+    }
 }

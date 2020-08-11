@@ -1,11 +1,11 @@
 @extends('admin.shared.main')
 @section('title')
-    Nhà văn hóa Thanh niên - Users
+    Nhà văn hóa Thanh niên - Khóa học
 @endsection
 @section('content')
     <div class="content_yield">
         <div class="row">
-            <h3 class="page_title">Users</h3>
+            <h3 class="page_title">Khóa học</h3>
             <div class="col-md-12">
                 @if(Session::has('message'))
                     <div id="div-alert" style="position:absolute; right: 10px;" class="float-right mt-2 alert alert-success alert-dismissible show" role="alert" style="position: absolute;">
@@ -25,30 +25,40 @@
             </div>
 
         </div>
-        <a href="{{ route('user.store') }}" class="btn bg-color-green add_new_button"><i class="fas fa-plus"></i> Add new</a>
+        <a href="{{ route('course.store') }}" class="btn bg-color-green add_new_button"><i class="fas fa-plus"></i> Thêm mới</a>
         <table class="table table_xk table-hover table-bordered">
             <thead class="thead_green">
             <tr>
                 <th class="text-center" style="width: 50px;">STT</th>
-                <th class="text-center">Name</th>
-                <th class="text-center">Email</th>
-                <th class="text-center">Action</th>
+                <th class="text-center" >Hình ảnh</th>
+                <th class="text-center">Tên khóa học</th>
+                <th class="text-center">Giới hạn học viên</th>
+                <th class="text-center">Giá</th>
+                <th class="text-center">Giảm giá</th>
+                <th class="text-center">Thời gian</th>
+                <th class="text-center">#</th>
             </tr>
             </thead>
             <tbody>
             <!-- Loop -->
-            @foreach($users as $key => $user)
+            @foreach($courses as $key => $course)
                 <tr>
                     <td class="text-center">{{++$key}}</td>
                     <td class="text-center">
+                        <img src="{{asset('images/'.$course->image)}}" width="50" height="50" alt="logo">
+                    </td>
+                    <td class="text-center">
                         <a href="">
-                            <h4>{{ $user->name }}</h4>
+                            <h4>{{ $course->name }}</h4>
                         </a>
                     </td>
-                    <td class="text-center">{{$user->email}}</td>
+                    <td class="text-center">{{ $course->maximum_student }}</td>
+                    <td class="text-center">{{ $course->price }}</td>
+                    <td class="text-center">{{ $course->discount }}%</td>
+                    <td class="text-center">{{ $course->start_date }} - {{$course->end_date}}</td>
                     <td class="text-center action_icon">
-                        <a href="{{route('user.edit',$user->id)}}"><i class="far fa-edit edit"></i></a>
-                        <a type="button" class="fas fa-trash-alt deletebutton text-danger btn" data-id="{{$user->id}}" data-toggle="modal" data-target="#Modal"></a>
+                        <a href="{{route('course.edit',$course->id)}}"><i class="far fa-edit edit"></i></a>
+                        <a type="button" class="fas fa-trash-alt deletebutton text-danger btn" data-id="{{$course->id}}" data-toggle="modal" data-target="#Modal"></a>
                     </td>
                 </tr>
             @endforeach
@@ -56,7 +66,7 @@
             </tbody>
         </table>
     </div>
-    {{Form::open(['route' => ['user.delete'], 'method' => 'DELETE'])}}
+    {{Form::open(['route' => ['course.delete'], 'method' => 'DELETE'])}}
     @include('admin.modal.modaldelete')
     {{ Form::close() }}
     <script>

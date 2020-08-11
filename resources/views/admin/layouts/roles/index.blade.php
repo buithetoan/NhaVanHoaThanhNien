@@ -1,6 +1,6 @@
 @extends('admin.shared.main')
 @section('title')
-    weaShopOnline - Roles
+    Nhà văn hóa Thanh niên - Roles
 @endsection
 @section('content')
     <div class="content_yield">

@@ -1,27 +1,27 @@
 @extends('admin.shared.main')
 @section('title')
-    Edit User
+    Chỉnh sửa
 @endsection
 @section('content')
     <div class="content_yield">
         {{ Form::open(['route'=>['user.update',$user->id],'method'=>'put','class' => 'col-md-12 row']) }}
         <div class="col-md-12 m-auto">
-            <h3 class="mb-5 font-weight-bold">User</h3>
+            <h3 class="mb-5 font-weight-bold">Phụ huynh</h3>
             <div class="col-lg-10 col-md-12 col-sm-12 row">
                 <div class="form-group">
-                    {{ Form::label('Name: ','',['class' => 'font-weight-bold']) }}
+                    {{ Form::label('Họ và tên: ','',['class' => 'font-weight-bold']) }}
                     {!! Form::text('name', $user->name, [
                         'class' => 'form-control',
-                        'placeholder'=>"Name User"
+                        'placeholder'=>"Họ và tên"
                     ])
                     !!}
                     <span class="text-danger">{{ $errors->first('name')}}</span>
                 </div>
                 <div class="form-group">
-                    {{ Form::label('Email: ','',['class' => 'font-weight-bold']) }}
+                    {{ Form::label('Địa chỉ Email: ','',['class' => 'font-weight-bold']) }}
                     {!! Form::text('email', $user->email, [
                         'class' => 'form-control',
-                        'placeholder'=>"Email"
+                        'placeholder'=>"Địa chỉ Email"
                     ])
                     !!}
                     <span class="text-danger">{{ $errors->first('email')}}</span>

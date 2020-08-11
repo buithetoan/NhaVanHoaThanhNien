@@ -19,18 +19,6 @@ class RoleSeeder extends Seeder
             'updated_at' => Carbon::now(),
         ]);
         DB::table('roles')->insert([
-            'name'=>'ROLE_MANAGER',
-            'display_name'=>'Manager',
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now(),
-        ]);
-        DB::table('roles')->insert([
-            'name'=>'ROLE_STAFF',
-            'display_name'=>'Staff',
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now(),
-        ]);
-        DB::table('roles')->insert([
             'name'=>'ROLE_CUSTOMER',
             'display_name'=>'Customer',
             'created_at' => Carbon::now(),

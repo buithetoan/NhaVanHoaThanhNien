@@ -80,6 +80,54 @@ Route::group(['middleware' => ['web']], function () {
                     'middleware'=> 'checkacl:delete_role'
                 ]);
             });
+            Route::prefix('admin/child')->group(function () {
+                Route::get('', [
+                    'as' => 'child.index',
+                    'uses' => 'ChildController@index',
+                    'middleware' => 'checkacl:view_child'
+                ]);
+                Route::get('/create', [
+                    'as' => 'child.create',
+                    'uses' => 'ChildController@create',
+                    'middleware' => 'checkacl:create_child'
+                ]);
+                Route::post('/create', 'ChildController@store')->name('child.store');
+                Route::get('/edit/{id}', [
+                    'as' => 'child.edit',
+                    'uses' => 'ChildController@edit',
+                    'middleware' => 'checkacl:edit_child'
+                ]);
+                Route::put('/edit/{id}', 'ChildController@update')->name('child.update');
+                Route::delete('/delete', [
+                    'as' => 'child.delete',
+                    'uses' =>'ChildController@destroy',
+                    'middleware'=> 'checkacl:delete_child'
+                ]);
+            });
+            Route::prefix('admin/course')->group(function () {
+                Route::get('', [
+                    'as' => 'course.index',
+                    'uses' => 'CourseController@index',
+                    'middleware' => 'checkacl:view_course'
+                ]);
+                Route::get('/create', [
+                    'as' => 'course.create',
+                    'uses' => 'CourseController@create',
+                    'middleware' => 'checkacl:create_course'
+                ]);
+                Route::post('/create', 'CourseController@store')->name('course.store');
+                Route::get('/edit/{id}', [
+                    'as' => 'course.edit',
+                    'uses' => 'CourseController@edit',
+                    'middleware' => 'checkacl:edit_course'
+                ]);
+                Route::put('/edit/{id}', 'CourseController@update')->name('course.update');
+                Route::delete('/delete', [
+                    'as' => 'course.delete',
+                    'uses' =>'CourseController@destroy',
+                    'middleware'=> 'checkacl:delete_course'
+                ]);
+            });
         });
     });
 });

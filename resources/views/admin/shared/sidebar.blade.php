@@ -8,9 +8,15 @@
     </div>
     <!-- Manage list -->
     <li class="list_item">
-        <a class="item_link" href="{{ route('user.index') }}">User</a>
+        <a class="item_link" href="{{ route('course.index') }}">Khóa học</a>
     </li>
     <li class="list_item">
-        <a class="item_link" href="{{ route('role.index') }}">Role</a>
+        <a class="item_link" href="{{ route('child.index') }}">Học viên</a>
     </li>
+    <li class="list_item">
+        <a class="item_link" href="{{ route('user.index') }}">Phụ huynh</a>
+    </li>
+{{--    <li class="list_item">--}}
+{{--        <a class="item_link" href="{{ route('role.index') }}">Phân quyền</a>--}}
+{{--    </li>--}}
 </ul>

@@ -21,6 +21,14 @@ use App\Repositories\RoleUser\RoleUserRepository;
 //parent user
 use App\Repositories\ParentUser\ParentUserInterface;
 use App\Repositories\ParentUser\ParentUserRepository;
+//child
+use App\Repositories\Child\ChildInterface;
+use App\Repositories\Child\ChildRepository;
+//course
+use App\Repositories\Course\CourseInterface;
+use App\Repositories\Course\CourseRepository;
+
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -53,6 +61,14 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             ParentUserInterface::class,
             ParentUserRepository::class
+        );
+        $this->app->bind(
+            ChildInterface::class,
+            ChildRepository::class
+        );
+        $this->app->bind(
+            CourseInterface::class,
+            CourseRepository::class
         );
     }
 
