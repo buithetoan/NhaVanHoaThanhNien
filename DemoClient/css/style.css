@@ -1,0 +1,85 @@
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/templates/modern-business)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+
+/* Reset */
+body { padding: 0; margin: 0; padding-top: 56px }
+a { text-decoration: none }
+.footer { background-color: #28822f !important }
+.carousel-item { height: 65vh; min-height: 300px; background: no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover }
+.portfolio-item { margin-bottom: 50px }
+.section_title { border-bottom: 2px solid #28822f; padding-bottom: 13px; margin-bottom: 50px; text-transform: uppercase }
+.section_title a { color: #fff; text-decoration: none; background: #28822f; padding: 15px; font-size: 21px }
+.page-content { margin-bottom: 50px }
+.breadcrumb a { color: #28822f; text-decoration: none }
+.navbar-dark .navbar-nav .nav-link { color: #fff }
+.bg-success { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background: #28822f !important }
+
+/* Van hoa nghe thuat */
+.vhnt { padding-top: 80px }
+.vhnt .card { transition: 0.3s }
+.vhnt .card:hover { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border: 1px solid #28822f }
+.vhnt .card-image { min-height: 232px }
+.vhnt .card-body { display: flex; flex-wrap: wrap }
+.vhnt .card-body .card-title a { color: #343a40; text-decoration: none }
+.vhnt .card-body p { color: #777 }
+.vhnt .card-body .card-button { width: 100%; display: flex; align-self: flex-end }
+
+/* Post */
+.post-page-content { padding-top: 30px }
+.post-page-content .breadcrumb { margin-bottom: 45px }
+.post-page-content .post-title { margin-bottom: 25px; font-size: 2.5rem }
+.post-page-content .post-content-main-image img { width: 100% }
+.post-page-content .post-content-time { border-top: 1px solid rgba(0, 0, 0, .1); border-bottom: 1px solid rgba(0, 0, 0, .1); margin: 30px 0; padding: 15px 0; font-style: italic }
+.post-page-content .post-content-time p { margin: 0 }
+.post-page-content .post-content-desc { margin-bottom: 80px }
+.post-page-content .post-content-desc p:last-child { margin: 0 }
+
+/* Post Side Bar */
+.post-page-content .sidebar .sidebar_title { border-bottom: 2px solid #28822f; padding-bottom: 2px; margin-bottom: 15px; text-transform: uppercase }
+.post-page-content .sidebar .sidebar_title span { color: #fff; text-decoration: none; background: #28822f; padding: 5px 10px }
+.post-page-content .sidebar .sidebar_content_box { margin-bottom: 20px; border: 1px solid rgba(0, 0, 0, .1); padding: 5px; transition: 0.3s }
+.post-page-content .sidebar .sidebar_content_box:hover { border: 1px solid #28822f }
+.post-page-content .sidebar .sidebar_content_box .sidebar_content_box_image img { width: 100% }
+.post-page-content .sidebar .sidebar_content_box .sidebar_content_box_title a { color: #212529; text-decoration: none; font-weight: 600; font-size: 15px; transition: 0.2s }
+.post-page-content .sidebar .sidebar_content_box .sidebar_content_box_title a:hover { color: #28822f }
+.post-page-content .sidebar .sidebar_content_box .row { justify-content: center; align-items: center }
+
+/* Class Page */
+.page-content .breadcrumb { margin-bottom: 35px }
+.class_page .card { box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19) }
+.class_page .card .card-title a { color: #343a40; text-decoration: none; transition: 0.2s }
+.class_page .card .card-title a:hover { color: #28822f }
+.class_page .card .card-text p { color: #777 }
+.class_page .card .card-body { display: flex; flex-wrap: wrap }
+.class_page .card .card-body .card-button { display: flex; align-self: flex-end }
+
+/* Category Page */
+.active_page .card-body .row { justify-content: center; align-items: center }
+.active_page .card-body .card-text { color: #777 }
+
+/* Login and Register */
+.client_lr_form { max-width: 480px; margin: 50px auto; font-size: 15px; min-height: 65vh }
+.client_lr_form form { margin-bottom: 15px; background: #f7f7f7; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); padding: 30px }
+.client_lr_form h2 { margin: 0 0 15px }
+.client_lr_form .form-control, .client_lr_form .btn { min-height: 38px; border-radius: 2px }
+.client_lr_form .btn { font-size: 15px; font-weight: bold }
+
+/* Register */
+.client_lr_form .form-control { height: 40px; box-shadow: none; color: #969fa4 }
+.client_lr_form .form-control:focus { border-color: #5cb85c }
+.client_lr_form .form-control, .client_lr_form .btn { border-radius: 3px }
+.client_lr_form .signup-form h2 { color: #636363; margin: 0 0 15px; position: relative; text-align: center }
+.client_lr_form .hint-text { color: #999; margin-bottom: 30px; text-align: center }
+.client_lr_form form { color: #999; border-radius: 3px; margin-bottom: 15px; background: #f2f3f7; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); padding: 30px }
+.client_lr_form .form-group { margin-bottom: 20px }
+.client_lr_form input[type="checkbox"] { margin-top: 3px }
+.client_lr_form .btn { font-size: 16px; font-weight: bold; min-width: 140px; outline: none !important }
+.client_lr_form .row div:first-child { padding-right: 10px }
+.client_lr_form .row div:last-child { padding-left: 10px }
+.client_lr_form a { color: #fff; text-decoration: underline }
+.client_lr_form a:hover { text-decoration: none }
+.client_lr_form form a { color: #5cb85c; text-decoration: none }
+.client_lr_form form a:hover { text-decoration: underline }
