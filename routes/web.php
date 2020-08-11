@@ -13,9 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['namespace'=>'Client','prefix'=>'/'],function (){
-    Route::get('/home', 'HomeController@index');
+Route::group(['namespace'=>'Client'],function (){
+    Route::get('/home', 'HomeController@homePage');
+    Route::get('/active', 'HomeController@activePage');
+    Route::get('/course', 'HomeController@coursePage');
+    Route::get('/blog', 'HomeController@blogPage');
+    /* ------------------------------------------
+        View Login va Register Form
+        Để tạm đây để hiện thị form trước
+        sau có xử lý thì sửa lại sau
+    ------------------------------------------- */
+    Route::get('/c/login', 'HomeController@showClientLoginForm');
+    Route::get('/c/register', 'HomeController@showClientRegisterForm');
+    /* ------------------------------------------
+        End view tạm
+    ------------------------------------------- */
 });
+
 Route::group(['middleware' => ['web']], function () {
     Route::get('login', 'Auth\LoginController@webLogin');
     Route::post('login', ['as'=>'client.login','uses'=>'Auth\LoginController@webLoginPost']);
