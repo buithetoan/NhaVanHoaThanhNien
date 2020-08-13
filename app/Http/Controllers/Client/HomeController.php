@@ -46,6 +46,22 @@ class HomeController extends Controller
     }
 
     /* --------------------------------------------------------
+        Course Detail Page
+    --------------------------------------------------------- */
+    public function courseDetailPage()
+    {
+        return view('client.course.course-detail');
+    }
+
+    /* --------------------------------------------------------
+        Meet Page
+    --------------------------------------------------------- */
+    public function meetPage()
+    {
+        return view('client.course.meet');
+    }
+
+    /* --------------------------------------------------------
         Blog Page
     --------------------------------------------------------- */
     public function blogPage()

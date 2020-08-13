@@ -16,6 +16,8 @@ Route::group(['namespace'=>'Client','prefix'=>'/'],function (){
     Route::get('/home', 'HomeController@index');
     Route::get('/active', 'HomeController@activePage');
     Route::get('/course', 'HomeController@coursePage');
+    Route::get('/course/detail', 'HomeController@courseDetailPage');
+    Route::get('/course/meet', 'HomeController@meetPage');
     Route::get('/blog', 'HomeController@blogPage');
 });
 Route::group(['middleware' => ['web']], function () {

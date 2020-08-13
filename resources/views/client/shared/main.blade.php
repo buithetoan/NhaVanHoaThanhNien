@@ -11,6 +11,8 @@
     <link href="{{ asset('client/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Custom styles =================================================== -->
     <link href="{{ asset('client/css/main-style.css') }}" rel="stylesheet">
+    <!-- jQuery =================================================== -->
+    <script src="{{ asset('client/vendor/jquery/jquery.min.js') }}"></script>
 </head>
 
 <body>
@@ -37,7 +39,6 @@
     <!-- End Footer -->
     <!-- ========================================================================================= -->
     <!-- Bootstrap core JavaScript -->
-    <script src="{{ asset('client/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('client/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </body>
 
