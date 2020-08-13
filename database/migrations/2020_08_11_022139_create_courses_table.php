@@ -23,7 +23,7 @@ class CreateCoursesTable extends Migration
             $table->bigInteger('maximum_student');
             $table->float('discount',8,2)->nullable();
             $table->string('start_date');
-            $table->string('end_date');
+            $table->string('end_date')->nullable();
             $table->timestamps();
         });
     }

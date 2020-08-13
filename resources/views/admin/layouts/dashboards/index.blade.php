@@ -12,8 +12,7 @@
                 </div>
                 <div class="info">
                     <h6>Tổng khóa học</h6>
-{{--                    <h3>{{$total_product}}</h3>--}}
-                    <h3>0</h3>
+                    <h3>{{$total_course}}</h3>
                 </div>
             </div>
         </div>
@@ -24,8 +23,7 @@
                 </div>
                 <div class="info">
                     <h6>Tổng số học viên</h6>
-{{--                    <h3>{{$total_customer}}</h3>--}}
-                    <h3>0</h3>
+                    <h3>{{$total_child}}</h3>
                 </div>
             </div>
         </div>

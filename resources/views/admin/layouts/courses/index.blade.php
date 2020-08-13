@@ -1,6 +1,6 @@
 @extends('admin.shared.main')
 @section('title')
-    Nhà văn hóa Thanh niên - Khóa học
+    Nhà văn hóa Thanh niên
 @endsection
 @section('content')
     <div class="content_yield">

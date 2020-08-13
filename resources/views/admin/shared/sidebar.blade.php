@@ -14,9 +14,9 @@
         <a class="item_link" href="{{ route('child.index') }}">Học viên</a>
     </li>
     <li class="list_item">
-        <a class="item_link" href="{{ route('user.index') }}">Phụ huynh</a>
+        <a class="item_link" href="{{ route('active.index') }}">Hoạt động</a>
     </li>
-{{--    <li class="list_item">--}}
-{{--        <a class="item_link" href="{{ route('role.index') }}">Phân quyền</a>--}}
-{{--    </li>--}}
+    <li class="list_item">
+        <a class="item_link" href="{{ route('parent.index') }}">Phụ huynh</a>
+    </li>
 </ul>

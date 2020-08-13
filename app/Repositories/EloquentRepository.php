@@ -50,7 +50,7 @@ abstract class EloquentRepository implements EloquentInterface
      */
     public function getPluck($name, $id)
     {
-        return $this->_model::pluck($name, $id)->get();
+        return $this->_model::pluck($name, $id);
     }
     /**
      * Get one

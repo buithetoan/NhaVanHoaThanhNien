@@ -20,7 +20,7 @@ class CreateActivitiesTable extends Migration
             $table->string('title');
             $table->longText('content')->nullable();
             $table->string('start_date');
-            $table->string('end_date');
+            $table->string('end_date')->nullable();
             $table->timestamps();
         });
     }

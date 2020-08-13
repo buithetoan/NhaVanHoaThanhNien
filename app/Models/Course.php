@@ -10,6 +10,6 @@ class Course extends Model
     protected $timestrap = true;
     public function childs()
     {
-        return $this->belongsToMany('App\Models\Child', 'course_child');
+        return $this->belongsToMany('App\Models\Child', 'course_child','course_id','child_id');
     }
 }

@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'email' => 'admin@gmail.com',
             'name' => 'Administrator',
-            'password' => bcrypt('aA123456'),
+            'password' => bcrypt('Matkhau1*'),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);

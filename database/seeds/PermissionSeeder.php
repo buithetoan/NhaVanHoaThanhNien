@@ -166,34 +166,34 @@ class PermissionSeeder extends Seeder
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
-        //blogs
+        //appointment
         DB::table('permissions')->insert([
-            'name'=>'create_blog',
-            'display_name'=>'Create blog',
+            'name'=>'create_appointment',
+            'display_name'=>'Create appointment',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
         DB::table('permissions')->insert([
-            'name'=>'edit_blog',
-            'display_name'=>'Edit blog',
+            'name'=>'edit_appointment',
+            'display_name'=>'Edit appointment',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
         DB::table('permissions')->insert([
-            'name'=>'view_blog',
-            'display_name'=>'View blog',
+            'name'=>'view_appointment',
+            'display_name'=>'View appointment',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
         DB::table('permissions')->insert([
-            'name'=>'detail_blog',
-            'display_name'=>'Detail blog',
+            'name'=>'detail_appointment',
+            'display_name'=>'Detail appointment',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
         DB::table('permissions')->insert([
-            'name'=>'delete_blog',
-            'display_name'=>'Delete blog',
+            'name'=>'delete_appointment',
+            'display_name'=>'Delete appointment',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);

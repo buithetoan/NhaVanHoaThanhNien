@@ -19,7 +19,43 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e6300d3-8729-4f8f-84af-5b1553bf69c6" name="Default Changelist" comment="" />
+    <list default="true" id="3e6300d3-8729-4f8f-84af-5b1553bf69c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Repositories/Active/ActiveInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/Active/ActiveRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/CourseChild/CourseChildInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/CourseChild/CourseChildRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/activities/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/activities/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/activities/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/parents/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/parents/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/parents/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ChildController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ChildController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Child.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Child.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Child/ChildInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Child/ChildInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Child/ChildRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Child/ChildRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Course/CourseInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Course/CourseInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/EloquentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/EloquentRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_10_081902_create_parents_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_10_081902_create_parents_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_11_022139_create_courses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_11_022139_create_courses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_11_024052_create_activities_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_11_024052_create_activities_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_11_024946_create_blogs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/PermissionSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PermissionSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/childs/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/childs/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/childs/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/childs/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/childs/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/childs/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/courses/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/courses/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/dashboards/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/dashboards/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/shared/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/shared/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/active/active.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/active/active.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/course/course.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/course/course.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -186,6 +222,8 @@
       <workItem from="1597023084658" duration="18904000" />
       <workItem from="1597112142033" duration="10397000" />
       <workItem from="1597148168018" duration="9969000" />
+      <workItem from="1597211402117" duration="1261000" />
+      <workItem from="1597303968044" duration="20401000" />
     </task>
     <servers />
   </component>
@@ -205,26 +243,30 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="422" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597029514352">
+    <state x="422" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597306326336">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="422" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1597029514352" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597119239646">
+    <state x="422" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1597306326336" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597326262064">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1597119239646" />
-    <state x="518" y="287" key="NewPhpFileDialog" timestamp="1597118999640">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1597326262064" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1597215541405">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1597118999640" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597215541405" />
+    <state x="518" y="287" key="NewPhpFileDialog" timestamp="1597312768348">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1597312768348" />
     <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1597024323713">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1597024323713" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1597151095517">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1597305385618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1597151095517" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1597305385618" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -235,14 +277,14 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php</url>
-          <line>24</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/auth/register.blade.php</url>
           <line>28</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

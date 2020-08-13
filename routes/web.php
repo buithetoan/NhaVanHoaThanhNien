@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 Route::group(['namespace'=>'Client','prefix'=>'/'],function (){
     Route::get('/home', 'HomeController@index');
-    Route::get('/active', 'HomeController@activePage');
-    Route::get('/course', 'HomeController@coursePage');
+    Route::get('/active', 'ActiveController@index');
+    Route::get('/course', 'CourseController@index');
     Route::get('/blog', 'HomeController@blogPage');
 });
 Route::group(['middleware' => ['web']], function () {
@@ -34,52 +34,28 @@ Route::group(['middleware' => ['web']], function () {
     Route::middleware(['checkuser'])->group(function () {
         Route::group(['namespace'=>'Admin','prefix'=>'/'],function (){
             Route::get('/admin/dashboard', 'DashboardController@index');
-            Route::prefix('admin/user')->group(function () {
+            Route::prefix('admin/parent')->group(function () {
                 Route::get('', [
-                    'as' => 'user.index',
-                    'uses' => 'UserController@index',
+                    'as' => 'parent.index',
+                    'uses' => 'ParentUserController@index',
                     'middleware' => 'checkacl:view_user'
                 ]);
                 Route::get('/create', [
-                    'as' => 'user.create',
-                    'uses' => 'UserController@create',
+                    'as' => 'parent.create',
+                    'uses' => 'ParentUserController@create',
                     'middleware' => 'checkacl:create_user'
                 ]);
-                Route::post('/create', 'UserController@store')->name('user.store');
+                Route::post('/create', 'ParentUserController@store')->name('parent.store');
                 Route::get('/edit/{id}', [
-                    'as' => 'user.edit',
-                    'uses' => 'UserController@edit',
+                    'as' => 'parent.edit',
+                    'uses' => 'ParentUserController@edit',
                     'middleware' => 'checkacl:edit_user'
                 ]);
-                Route::put('/edit/{id}', 'UserController@update')->name('user.update');
+                Route::put('/edit/{id}', 'ParentUserController@update')->name('parent.update');
                 Route::delete('/delete', [
-                    'as' => 'user.delete',
-                    'uses' =>'UserController@destroy',
+                    'as' => 'parent.delete',
+                    'uses' =>'ParentUserController@destroy',
                     'middleware'=> 'checkacl:delete_user'
-                ]);
-            });
-            Route::prefix('admin/role')->group(function () {
-                Route::get('', [
-                    'as' => 'role.index',
-                    'uses' => 'RoleController@index',
-                    'middleware' => 'checkacl:view_role'
-                ]);
-                Route::get('/create', [
-                    'as' => 'role.create',
-                    'uses' => 'RoleController@create',
-                    'middleware' => 'checkacl:create_role'
-                ]);
-                Route::post('/create', 'RoleController@store')->name('role.store');
-                Route::get('/edit/{id}', [
-                    'as' => 'role.edit',
-                    'uses' => 'RoleController@edit',
-                    'middleware' => 'checkacl:edit_role'
-                ]);
-                Route::put('/edit/{id}', 'RoleController@update')->name('role.update');
-                Route::delete('/delete', [
-                    'as' => 'role.delete',
-                    'uses' =>'RoleController@destroy',
-                    'middleware'=> 'checkacl:delete_role'
                 ]);
             });
             Route::prefix('admin/child')->group(function () {
@@ -128,6 +104,30 @@ Route::group(['middleware' => ['web']], function () {
                     'as' => 'course.delete',
                     'uses' =>'CourseController@destroy',
                     'middleware'=> 'checkacl:delete_course'
+                ]);
+            });
+            Route::prefix('admin/active')->group(function () {
+                Route::get('', [
+                    'as' => 'active.index',
+                    'uses' => 'ActiveController@index',
+                    'middleware' => 'checkacl:view_active'
+                ]);
+                Route::get('/create', [
+                    'as' => 'active.create',
+                    'uses' => 'ActiveController@create',
+                    'middleware' => 'checkacl:create_active'
+                ]);
+                Route::post('/create', 'ActiveController@store')->name('active.store');
+                Route::get('/edit/{id}', [
+                    'as' => 'active.edit',
+                    'uses' => 'ActiveController@edit',
+                    'middleware' => 'checkacl:edit_active'
+                ]);
+                Route::put('/edit/{id}', 'ActiveController@update')->name('active.update');
+                Route::delete('/delete', [
+                    'as' => 'active.delete',
+                    'uses' =>'ActiveController@destroy',
+                    'middleware'=> 'checkacl:delete_active'
                 ]);
             });
         });
