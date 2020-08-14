@@ -16,7 +16,8 @@ Route::group(['namespace'=>'Client','prefix'=>'/'],function (){
     Route::get('/home', 'HomeController@index');
     Route::get('/active', 'ActiveController@index');
     Route::get('/course', 'CourseController@index');
-    Route::get('/blog', 'HomeController@blogPage');
+    Route::get('/course/detail', 'CourseController@courseDetailPage');
+    Route::get('/course/meet', 'CourseController@meetPage');
 });
 Route::group(['middleware' => ['web']], function () {
     Route::get('login', 'Auth\LoginController@webLogin');
@@ -128,6 +129,30 @@ Route::group(['middleware' => ['web']], function () {
                     'as' => 'active.delete',
                     'uses' =>'ActiveController@destroy',
                     'middleware'=> 'checkacl:delete_active'
+                ]);
+            });
+            Route::prefix('admin/class')->group(function () {
+                Route::get('', [
+                    'as' => 'class.index',
+                    'uses' => 'ClassRoomController@index',
+                    'middleware' => 'checkacl:view_class'
+                ]);
+                Route::get('/create', [
+                    'as' => 'class.create',
+                    'uses' => 'ClassRoomController@create',
+                    'middleware' => 'checkacl:create_class'
+                ]);
+                Route::post('/create', 'ClassRoomController@store')->name('class.store');
+                Route::get('/edit/{id}', [
+                    'as' => 'class.edit',
+                    'uses' => 'ClassRoomController@edit',
+                    'middleware' => 'checkacl:edit_class'
+                ]);
+                Route::put('/edit/{id}', 'ClassRoomController@update')->name('class.update');
+                Route::delete('/delete', [
+                    'as' => 'class.delete',
+                    'uses' =>'ClassRoomController@destroy',
+                    'middleware'=> 'checkacl:delete_class'
                 ]);
             });
         });

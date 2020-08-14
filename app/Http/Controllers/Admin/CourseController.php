@@ -5,15 +5,18 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CourseRequest;
 use App\Models\Course;
+use App\Repositories\ClassRoom\ClassRoomInterface;
 use App\Repositories\Course\CourseInterface;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
     protected $courseRepository;
-    public function __construct(CourseInterface $courseRepos)
+    protected $roomRepository;
+    public function __construct(CourseInterface $courseRepos, ClassRoomInterface $roomRepos)
     {
         $this->courseRepository = $courseRepos;
+        $this->roomRepository = $roomRepos;
     }
     /**
      * Display a listing of the resource.
@@ -113,6 +116,12 @@ class CourseController extends Controller
         $course->discount = $request->discount;
         $course->start_date = $request->start_date;
         $course->end_date = $request->end_date;
+        //update class room
+        $rooms = $this->roomRepository->getClassByCourseId($course->id);
+        foreach ($rooms as $room){
+            $room->class_member = $course->maximum_student;
+            $this->roomRepository->update($room->id,$room->toArray());
+        }
         $result = $this->courseRepository->update($id, $course->toArray());
 
         return redirect('admin/course')->with('message','Cập nhật thành công!');

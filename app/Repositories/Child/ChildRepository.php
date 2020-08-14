@@ -14,9 +14,9 @@ class ChildRepository extends EloquentRepository implements ChildInterface {
     }
     public function getChild()
     {
-        $courseChild = DB::table('course_child')->get();
+        $classChild = DB::table('class_child')->get();
         $arr = array();
-        foreach ($courseChild as $cc){
+        foreach ($classChild as $cc){
             $arr[] = $cc->child_id;
         }
         $childs = $this->_model::all();

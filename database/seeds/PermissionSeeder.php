@@ -197,5 +197,36 @@ class PermissionSeeder extends Seeder
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
+        //class
+        DB::table('permissions')->insert([
+            'name'=>'create_class',
+            'display_name'=>'Create class',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        DB::table('permissions')->insert([
+            'name'=>'edit_class',
+            'display_name'=>'Edit class',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        DB::table('permissions')->insert([
+            'name'=>'view_class',
+            'display_name'=>'View class',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        DB::table('permissions')->insert([
+            'name'=>'detail_class',
+            'display_name'=>'Detail class',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        DB::table('permissions')->insert([
+            'name'=>'delete_class',
+            'display_name'=>'Delete class',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
     }
 }

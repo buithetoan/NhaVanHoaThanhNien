@@ -32,12 +32,12 @@
 
                     <span class="text-danger">{{ $errors->first('parent_id')}}</span>
                 </div>
-                <select class="form-control" style="margin-bottom: 20px;" name="courses[]" multiple="multiple">
-                    @foreach($courses as $course)
+                <select class="form-control" style="margin-bottom: 20px;" name="rooms[]" multiple="multiple">
+                    @foreach($rooms as $room)
                         <option
-                            {{ $listCourseOfChild->contains($course->id) ? 'selected' : '' }}
-                            value="{{ $course->id }}">
-                            {{ $course->name }}
+                            {{ $listRoomOfChild->contains($room->id) ? 'selected' : '' }}
+                            value="{{ $room->id }}">
+                            {{ $room->name }}
                         </option>
                     @endforeach
                 </select>

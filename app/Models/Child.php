@@ -12,8 +12,8 @@ class Child extends Model
     {
         return $this->belongsto('App\Models\ParentUser');
     }
-    public function courses()
+    public function rooms()
     {
-        return $this->belongstoMany('App\Models\Course', 'course_child','child_id','course_id');
+        return $this->belongstoMany('App\Models\ClassRoom', 'class_child','child_id','class_id');
     }
 }

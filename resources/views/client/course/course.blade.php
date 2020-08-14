@@ -26,7 +26,8 @@
                                 <p>{{$course->title}}</p>
                             </div>
                             <div class="card-button">
-                                <a href="" class="btn btn-success">Đặt lịch học</a>
+                                <a href="{{ url('/course/detail?course_id='.$course->id) }}" class="btn btn-success">Chi tiết</a>
+                                <a href="{{ url('/course/meet') }}" class="btn btn-outline-success">Đặt lịch hẹn</a>
                             </div>
                         </div>
                     </div>

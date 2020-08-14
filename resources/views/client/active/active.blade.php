@@ -25,7 +25,7 @@
                     <div class="col-lg-6">
                         <h2 class="card-title"><a href="#">{{$active->title}}</a></h2>
                         <p class="card-text">{!! Illuminate\Support\Str::limit($active->content, 100) !!}</p>
-                        <a href="{{ url('/blog') }}" class="btn btn-success">Read More &rarr;</a>
+                        <a href="#" class="btn btn-success">Xem thêm &rarr;</a>
                     </div>
                 </div>
             </div>

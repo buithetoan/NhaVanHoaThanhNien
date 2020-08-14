@@ -27,9 +27,12 @@ use App\Repositories\Child\ChildRepository;
 //course
 use App\Repositories\Course\CourseInterface;
 use App\Repositories\Course\CourseRepository;
-//course child
-use App\Repositories\CourseChild\CourseChildInterface;
-use App\Repositories\CourseChild\CourseChildRepository;
+//class room
+use App\Repositories\ClassRoom\ClassRoomInterface;
+use App\Repositories\ClassRoom\ClassRoomRepository;
+//class child
+use App\Repositories\ClassChild\ClassChildInterface;
+use App\Repositories\ClassChild\ClassChildRepository;
 //Active
 use App\Repositories\Active\ActiveInterface;
 use App\Repositories\Active\ActiveRepository;
@@ -76,8 +79,12 @@ class AppServiceProvider extends ServiceProvider
             CourseRepository::class
         );
         $this->app->bind(
-            CourseChildInterface::class,
-            CourseChildRepository::class
+            ClassRoomInterface::class,
+            ClassRoomRepository::class
+        );
+        $this->app->bind(
+            ClassChildInterface::class,
+            ClassChildRepository::class
         );
         $this->app->bind(
             ActiveInterface::class,

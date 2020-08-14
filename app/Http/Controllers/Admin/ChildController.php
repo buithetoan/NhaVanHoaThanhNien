@@ -5,8 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Child;
 use App\Repositories\Child\ChildInterface;
+use App\Repositories\ClassRoom\ClassRoomInterface;
 use App\Repositories\Course\CourseInterface;
-use App\Repositories\CourseChild\CourseChildInterface;
+use App\Repositories\ClassChild\ClassChildInterface;
 use App\Repositories\ParentUser\ParentUserInterface;
 use Illuminate\Http\Request;
 
@@ -14,14 +15,14 @@ class ChildController extends Controller
 {
     protected $childRepository;
     protected $parentRepository;
-    protected $courseRepository;
-    protected $courseChildRepository;
-    public function __construct(ChildInterface $childRepos, ParentUserInterface $parentRepos, CourseInterface $courseRepos, CourseChildInterface $courseChildRepos)
+    protected $classRoomRepository;
+    protected $classChildRepository;
+    public function __construct(ChildInterface $childRepos, ParentUserInterface $parentRepos, ClassRoomInterface $classRoomRepos, ClassChildInterface $classChildRepos)
     {
         $this->parentRepository = $parentRepos;
         $this->childRepository = $childRepos;
-        $this->courseRepository = $courseRepos;
-        $this->courseChildRepository = $courseChildRepos;
+        $this->classRoomRepository = $classRoomRepos;
+        $this->classChildRepository = $classChildRepos;
     }
     /**
      * Display a listing of the resource.
@@ -33,10 +34,10 @@ class ChildController extends Controller
         $childs = $this->childRepository->getAll();
 //        dd($childs);
         $parents = $this->parentRepository->getAll();
-        $courses = $this->courseRepository->getAll();
-        $courseChild = $this->courseChildRepository->getAll();
-        $count = $this->courseChildRepository->getListCourse();
-        return view('admin.layouts.childs.index',compact('count','childs','parents','courses','courseChild'));
+        $rooms = $this->classRoomRepository->getAll();
+        $classChild = $this->classChildRepository->getAll();
+        $count = $this->classChildRepository->getListClass();
+        return view('admin.layouts.childs.index',compact('count','childs','parents','rooms','classChild'));
     }
 
     /**
@@ -47,8 +48,8 @@ class ChildController extends Controller
     public function create()
     {
         $parents = $this->parentRepository->getPluck('full_name','id');
-        $courses = $this->courseChildRepository->getListCourse();
-        return view('admin.layouts.childs.create',compact('parents','courses'));
+        $rooms = $this->classChildRepository->getListClass();
+        return view('admin.layouts.childs.create',compact('parents','rooms'));
     }
 
     /**
@@ -65,7 +66,7 @@ class ChildController extends Controller
            'parent_id'=>$request->parent_id,
         ]);
         $createChild = $this->childRepository->create($child->toArray());
-        $createChild->courses()->attach($request->courses);
+        $createChild->rooms()->attach($request->rooms);
         $createChild->save();
         if ($createChild) return redirect('/admin/child')->with('message','Tạo mới thành công!');
         else return back()->with('err','Đã xãy ra lõi!');
@@ -92,9 +93,9 @@ class ChildController extends Controller
     {
         $child = $this->childRepository->find($id);
         $parents = $this->parentRepository->getPluck('full_name','id');
-        $courses = $this->courseRepository->getAll();
-        $listCourseOfChild =$this->courseChildRepository->getAllCourseOfChild($id);
-        return view('admin.layouts.childs.edit',compact('child','parents','courses','listCourseOfChild'));
+        $rooms = $this->classRoomRepository->getAll();
+        $listRoomOfChild =$this->classChildRepository->getAllClassOfChild($id);
+        return view('admin.layouts.childs.edit',compact('child','parents','rooms','listRoomOfChild'));
     }
 
     /**
@@ -107,12 +108,12 @@ class ChildController extends Controller
     public function update(Request $request, $id)
     {
         try {
-            $delete =  $this->courseChildRepository->deleteCourseOfChild($id);
+            $delete =  $this->classChildRepository->deleteClassOfChild($id);
 
             $childUpdate = $this->childRepository->find($id);
             $childUpdate->name = $request->name;
             $childUpdate->year_old = $request->year_old;
-            $childUpdate->courses()->attach($request->courses);
+            $childUpdate->rooms()->attach($request->rooms);
             $result = $this->childRepository->update($id, $childUpdate->toArray());
             return redirect('admin/child')->with('message','Cập nhật thành công!');
         } catch (Exception $e) {
@@ -131,7 +132,7 @@ class ChildController extends Controller
         try {
             $child = $this->childRepository->find($request->id);
 
-            $this->courseChildRepository->deleteCourseOfChild($child->id);
+            $this->classChildRepository->deleteClassOfChild($child->id);
 
             $childDelete = $this->childRepository->delete($child->id);
 

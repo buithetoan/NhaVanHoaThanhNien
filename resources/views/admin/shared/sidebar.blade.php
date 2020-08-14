@@ -11,6 +11,9 @@
         <a class="item_link" href="{{ route('course.index') }}">Khóa học</a>
     </li>
     <li class="list_item">
+        <a class="item_link" href="{{ route('class.index') }}">Lớp học</a>
+    </li>
+    <li class="list_item">
         <a class="item_link" href="{{ route('child.index') }}">Học viên</a>
     </li>
     <li class="list_item">

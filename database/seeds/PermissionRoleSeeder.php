@@ -191,5 +191,35 @@ class PermissionRoleSeeder extends Seeder
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
+        DB::table('permission_roles')->insert([
+            'role_id'=>'1',
+            'permission_id'=>'31',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        DB::table('permission_roles')->insert([
+            'role_id'=>'1',
+            'permission_id'=>'32',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        DB::table('permission_roles')->insert([
+            'role_id'=>'1',
+            'permission_id'=>'33',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        DB::table('permission_roles')->insert([
+            'role_id'=>'1',
+            'permission_id'=>'34',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        DB::table('permission_roles')->insert([
+            'role_id'=>'1',
+            'permission_id'=>'35',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
     }
 }

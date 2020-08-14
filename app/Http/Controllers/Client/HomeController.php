@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Client;
 use App\Http\Controllers\Controller;
+use App\Repositories\Active\ActiveInterface;
+use App\Repositories\Course\CourseInterface;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,8 +13,12 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    protected $activeRepository;
+    protected $courseRepository;
+    public function __construct(ActiveInterface $activeRepos,CourseInterface $courseRepos)
     {
+        $this->activeRepository = $activeRepos;
+        $this->courseRepository = $courseRepos;
     }
 
     /**
@@ -26,30 +32,8 @@ class HomeController extends Controller
     --------------------------------------------------------- */
     public function index()
     {
-        return view('client.home.home');
+        $activities = $this->activeRepository->getAll();
+        return view('client.home.home',compact('activities'));
     }
 
-    /* --------------------------------------------------------
-        Active Page
-    --------------------------------------------------------- */
-    public function activePage()
-    {
-        return view('client.active.active');
-    }
-
-    /* --------------------------------------------------------
-        Course Page
-    --------------------------------------------------------- */
-    public function coursePage()
-    {
-        return view('client.course.course');
-    }
-
-    /* --------------------------------------------------------
-        Blog Page
-    --------------------------------------------------------- */
-    public function blogPage()
-    {
-        return view('client.blog.blog');
-    }
 }

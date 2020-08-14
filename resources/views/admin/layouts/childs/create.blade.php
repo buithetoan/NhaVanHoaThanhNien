@@ -32,12 +32,14 @@
 
                     <span class="text-danger">{{ $errors->first('parent_id')}}</span>
                 </div>
-                <select class="form-control" style="margin-bottom: 20px;" name="courses[]" multiple="multiple">
-                    @foreach($courses as $course)
-                        <option value="{{ $course->id }}">{{ $course->name }}</option>
-                    @endforeach
-
-                </select>
+                <div class="form-group">
+                    {{ Form::label('Lớp học: ','',['class' => 'font-weight-bold']) }}
+                    <select class="form-control" style="margin-bottom: 20px;" name="rooms[]" multiple="multiple">
+                        @foreach($rooms as $room)
+                            <option value="{{ $room->id }}">{{ $room->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
                 <div class="form-group text-right">
                     <a class="btn btn-info mt-3" href="{{ route('child.index') }}" title="back"><i class="fas fa-arrow-left"> Back to list</i></a>
                     {{ Form::submit('Save',['class' => 'font-weight-bold text-white btn bg-color-green mt-3']) }}
