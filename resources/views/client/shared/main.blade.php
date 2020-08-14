@@ -11,6 +11,10 @@
     <link href="{{ asset('client/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Custom styles =================================================== -->
     <link href="{{ asset('client/css/main-style.css') }}" rel="stylesheet">
+    <link href="{{ asset('client/css/style_2.css') }}" rel="stylesheet">
+    <link href="{{ asset('client/css/all.css') }}" rel="stylesheet"> <!--load all styles -->
+    <script defer src="{{ asset('client/js/all.js') }}"></script> <!--load all styles -->
+
 </head>
 
 <body>
