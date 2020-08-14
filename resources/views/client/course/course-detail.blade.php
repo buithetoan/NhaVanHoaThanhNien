@@ -20,9 +20,9 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-lg-6">
-                        <a href="#">
+                        <div class="course_detail_image">
                             <img class="img-fluid rounded" src="{{ asset('client/imgs/'.$course->image) }}" alt="img">
-                        </a>
+                        </div>
                     </div>
                     <div class="col-lg-6">
                         <h2 class="card-title">{{$course->title}}</h2>

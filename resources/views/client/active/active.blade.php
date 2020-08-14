@@ -18,14 +18,14 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-lg-6">
-                        <a href="{{ url('/blog') }}">
-                            <img class="img-fluid rounded" src="{{  asset('client/imgs/'.$active->image) }}" alt="">
+                        <a href="{{ url('/active/detail') }}">
+                            <img class="img-fluid rounded" src="{{  asset('images/'.$active->image) }}" alt="">
                         </a>
                     </div>
                     <div class="col-lg-6">
-                        <h2 class="card-title"><a href="#">{{$active->title}}</a></h2>
+                        <h2 class="card-title"><a href="{{ url('/active/detail') }}">{{$active->title}}</a></h2>
                         <p class="card-text">{!! Illuminate\Support\Str::limit($active->content, 100) !!}</p>
-                        <a href="#" class="btn btn-success">Xem thêm &rarr;</a>
+                        <a href="{{ url('/active/detail') }}" class="btn btn-success">Xem thêm &rarr;</a>
                     </div>
                 </div>
             </div>

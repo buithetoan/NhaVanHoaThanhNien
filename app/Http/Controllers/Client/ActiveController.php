@@ -18,4 +18,8 @@ class ActiveController extends Controller
         $activities = $this->activeRepository->getAll();
         return view('client.active.active',compact('activities'));
     }
+    public function detail()
+    {
+        return view('client.active.active-detail');
+    }
 }

@@ -36,4 +36,12 @@ class HomeController extends Controller
         return view('client.home.home',compact('activities'));
     }
 
+    /* --------------------------------------------------------
+        Profile Page
+    --------------------------------------------------------- */
+    public function profilePage()
+    {
+        return view('client.profile.profile');
+    }
+
 }

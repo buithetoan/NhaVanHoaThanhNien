@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 Route::group(['namespace'=>'Client','prefix'=>'/'],function (){
     Route::get('/home', 'HomeController@index');
+    Route::get('/profile', 'HomeController@profilePage');
     Route::get('/active', 'ActiveController@index');
+    Route::get('/active/detail', 'ActiveController@detail');
     Route::get('/course', 'CourseController@index');
     Route::get('/course/detail', 'CourseController@courseDetailPage');
     Route::get('/course/meet', 'CourseController@meetPage');
