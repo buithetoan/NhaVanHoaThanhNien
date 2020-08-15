@@ -14,10 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 Route::group(['namespace'=>'Client','prefix'=>'/'],function (){
     Route::get('/home', 'HomeController@index');
+    Route::get('/profile', 'HomeController@profilePage');
     Route::get('/active', 'ActiveController@index');
+    Route::get('/active/detail', 'ActiveController@detail');
     Route::get('/course', 'CourseController@index');
     Route::get('/course/detail', 'CourseController@courseDetailPage');
     Route::get('/course/meet', 'CourseController@meetPage');
+    Route::get('/course/register', 'CourseController@registerCourse');
+    Route::post('/course/register',['as' => 'course.register', 'uses' => 'CourseController@register']);
+    Route::post('/course/showValueChild', ['as'=>'course.showValueChild','uses'=>'CourseController@showValueChild']);
+//    Route::get('/course/showValueChild', 'CourseController@showValueChild');
+
 });
 Route::group(['middleware' => ['web']], function () {
     Route::get('login', 'Auth\LoginController@webLogin');
@@ -154,6 +161,19 @@ Route::group(['middleware' => ['web']], function () {
                     'uses' =>'ClassRoomController@destroy',
                     'middleware'=> 'checkacl:delete_class'
                 ]);
+            });
+            Route::prefix('admin/appointment')->group(function () {
+                Route::get('', [
+                    'as' => 'appointment.index',
+                    'uses' => 'AppointmentController@index',
+                    'middleware' => 'checkacl:view_appointment'
+                ]);
+                Route::get('/edit/{id}', [
+                    'as' => 'appointment.edit',
+                    'uses' => 'AppointmentController@edit',
+                    'middleware' => 'checkacl:edit_appointment'
+                ]);
+                Route::put('/edit/{id}', 'AppointmentController@update')->name('appointment.update');
             });
         });
     });

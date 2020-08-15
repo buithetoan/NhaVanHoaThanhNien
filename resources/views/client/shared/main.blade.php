@@ -11,6 +11,7 @@
     <link href="{{ asset('client/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Custom styles =================================================== -->
     <link href="{{ asset('client/css/main-style.css') }}" rel="stylesheet">
+
 </head>
 
 <body>

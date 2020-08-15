@@ -22,4 +22,8 @@ class ChildRepository extends EloquentRepository implements ChildInterface {
         $childs = $this->_model::all();
         return $childs->whereBetween('id',$arr);
     }
+    public function getChildByParentId($parent_id)
+    {
+        return $this->_model::where('parent_id',$parent_id)->get();
+    }
 }

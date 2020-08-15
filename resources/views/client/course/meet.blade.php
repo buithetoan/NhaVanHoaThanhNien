@@ -98,7 +98,6 @@
                         <hr>
                         <div class="form-group">
                             <label class="font-weight-bold">Chọn thời gian hẹn</label>
-                            <input type="text"  data-provide="datepicker" class="form-control datepicker">
                         </div>
                     </div>
                     <div class="form_submit">
@@ -109,9 +108,6 @@
             </div>
         </form>
     </div>
-    <link rel="stylesheet prefetch" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
-    <script type="text/javascript">
-        $('.datepicker').datepicker();
-    </script>
+
+
 @endsection
