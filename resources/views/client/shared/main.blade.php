@@ -7,6 +7,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>@yield('title')</title>
+    <!-- AOS animate =================================================== -->
+    <link href="{{ asset('client/css/aos.css') }}" rel="stylesheet">
     <!-- Bootstrap core CSS =================================================== -->
     <link href="{{ asset('client/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Custom styles =================================================== -->
@@ -39,6 +41,11 @@
     <!-- Bootstrap core JavaScript -->
     <script src="{{ asset('client/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('client/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>
