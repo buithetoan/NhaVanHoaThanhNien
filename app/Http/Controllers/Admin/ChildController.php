@@ -4,12 +4,16 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Child;
+use App\Models\ParentUser;
+use App\Models\User;
 use App\Repositories\Child\ChildInterface;
 use App\Repositories\ClassRoom\ClassRoomInterface;
 use App\Repositories\Course\CourseInterface;
 use App\Repositories\ClassChild\ClassChildInterface;
 use App\Repositories\ParentUser\ParentUserInterface;
+use App\Repositories\User\UserInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ChildController extends Controller
 {
@@ -17,11 +21,13 @@ class ChildController extends Controller
     protected $parentRepository;
     protected $classRoomRepository;
     protected $classChildRepository;
-    public function __construct(ChildInterface $childRepos, ParentUserInterface $parentRepos, ClassRoomInterface $classRoomRepos, ClassChildInterface $classChildRepos)
+    protected $userRepository;
+    public function __construct(ChildInterface $childRepos, ParentUserInterface $parentRepos,UserInterface $userRepos, ClassRoomInterface $classRoomRepos, ClassChildInterface $classChildRepos)
     {
         $this->parentRepository = $parentRepos;
         $this->childRepository = $childRepos;
         $this->classRoomRepository = $classRoomRepos;
+        $this->userRepository = $userRepos;
         $this->classChildRepository = $classChildRepos;
     }
     /**
@@ -47,11 +53,9 @@ class ChildController extends Controller
      */
     public function create()
     {
-        $parents = $this->parentRepository->getPluck('full_name','id');
         $rooms = $this->classChildRepository->getListClass();
         return view('admin.layouts.childs.create',compact('parents','rooms'));
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -60,10 +64,29 @@ class ChildController extends Controller
      */
     public function store(Request $request)
     {
+        $user = new User([
+            'name' => $request->full_name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password)
+        ]);
+        $userCreate = $this->userRepository->create($user->toArray());
+        // Insert data to role_permission
+        $userCreate->roles()->attach(2);
+
+        $userCreate->save();
+        $parentUser = new ParentUser([
+            'full_name' => $request->full_name,
+            'address' => $request->address,
+            'email' => $request->email,
+            'phone_no' => $request->phone_no,
+            'user_id' =>$userCreate->id
+        ]);
+        $createParentUser = $this->parentRepository->create($parentUser->toArray());
+        $createParentUser->save();
         $child = new Child([
            'name'=>$request->name,
            'year_old'=>$request->year_old,
-           'parent_id'=>$request->parent_id,
+           'parent_id'=>$createParentUser->id,
         ]);
         $createChild = $this->childRepository->create($child->toArray());
         $createChild->rooms()->attach($request->rooms);

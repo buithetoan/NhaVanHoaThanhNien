@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
 <<<<<<< HEAD
     <list default="true" id="3e6300d3-8729-4f8f-84af-5b1553bf69c6" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravelbootstrapdatepicker/bootstrap/cache/packages.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/laravelbootstrapdatepicker/bootstrap/cache/services.php" beforeDir="false" />
@@ -7899,6 +7900,84 @@
       <change beforePath="$PROJECT_DIR$/laravelbootstrapdatepicker/vendor/webmozart/assert/src/Mixin.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-af.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-am.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-no.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-sr-RS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-sr-YU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/i18n/jquery-ui-timepicker-zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/jquery-ui-sliderAccess.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/jquery-ui-timepicker-addon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap/jquery-ui-timepicker-addon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/appointments/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/client/active/active-detail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/client/course/register.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/client/profile/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ChildController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ChildController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Client/ActiveController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Client/ActiveController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Client/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Client/CourseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Client/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Client/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Appointment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Appointment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Active/ActiveInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Active/ActiveInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Active/ActiveRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Active/ActiveRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Child/ChildInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Child/ChildInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Child/ChildRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Child/ChildRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/ClassRoom/ClassRoomInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ClassRoom/ClassRoomInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/ClassRoom/ClassRoomRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ClassRoom/ClassRoomRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/client/css/main-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/client/css/main-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/childs/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/childs/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/shared/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/shared/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/active/active.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/active/active.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/course/course-detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/course/course-detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/course/course.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/course/course.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/course/meet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/course/meet.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/home/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/home/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/shared/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/shared/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/shared/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/shared/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/shared/menu-bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/shared/menu-bar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+>>>>>>> toanbt_course_register
     </list>
 =======
     <list default="true" id="3e6300d3-8729-4f8f-84af-5b1553bf69c6" name="Default Changelist" comment="" />
@@ -8035,6 +8114,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/bootstrap" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -8044,6 +8124,9 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\NhaVanHoaThanhNien\public\bootstrap" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\NhaVanHoaThanhNien\resources\views" />
       <recent name="C:\xampp\htdocs\NhaVanHoaThanhNien\resources\views\layouts" />
@@ -8071,7 +8154,8 @@
       <workItem from="1597148168018" duration="9969000" />
       <workItem from="1597211402117" duration="1261000" />
       <workItem from="1597303968044" duration="25507000" />
-      <workItem from="1597379293384" duration="15475000" />
+      <workItem from="1597379293384" duration="38144000" />
+      <workItem from="1597474520958" duration="28553000" />
     </task>
     <servers />
   </component>
@@ -8095,26 +8179,35 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="422" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1597306326336" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597385812871">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597505332657">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1597385812871" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1597505332657" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1597215541405">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597215541405" />
-    <state x="518" y="287" key="NewPhpFileDialog" timestamp="1597394779252">
+    <state x="518" y="287" key="NewPhpFileDialog" timestamp="1597412190779">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+<<<<<<< HEAD
     <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1597394779252" />
     <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1597506493874">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1597506493874" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1597383436008">
+=======
+    <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1597412190779" />
+    <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1597024323713">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1597383436008" />
+    <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1597024323713" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1597484628253">
+>>>>>>> toanbt_course_register
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1597484628253" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

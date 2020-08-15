@@ -31,6 +31,9 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ url('/profile') }}">
+                                Thông tin người dùng
+                            </a>
                             <a class="dropdown-item" href="{{ route('client.logout') }}">
                                 Đăng xuất
                             </a>

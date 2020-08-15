@@ -98,7 +98,7 @@
                         <hr>
                         <div class="form-group">
                             <!-- start date -->
-                            
+
                                 <h1>Chọn Thời Gian Hẹn</h1>
                                   <label>Date</label>
                                   <div class="input-group date" id="datepicker">
@@ -108,7 +108,7 @@
                                   <div class="input-group time" id="timepicker">
                                     <input class="form-control" placeholder="HH:MM AM/PM"/><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock"></i></span></span>
                                 </div>
-                            
+
                             <!-- end date -->
                         </div>
                     </div>

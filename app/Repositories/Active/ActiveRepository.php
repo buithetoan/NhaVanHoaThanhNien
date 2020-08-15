@@ -11,4 +11,8 @@ class ActiveRepository extends EloquentRepository implements ActiveInterface {
     {
         return \App\Models\Active::class;
     }
+    public function getTopActive($id)
+    {
+        return $this->_model::where('id','><',$id)->orderBy('start_date','DESC')->take(5)->get();
+    }
 }

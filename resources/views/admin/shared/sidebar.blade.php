@@ -8,6 +8,9 @@
     </div>
     <!-- Manage list -->
     <li class="list_item">
+        <a class="item_link" href="{{ route('appointment.index') }}">Cuộc hẹn</a>
+    </li>
+    <li class="list_item">
         <a class="item_link" href="{{ route('course.index') }}">Khóa học</a>
     </li>
     <li class="list_item">
