@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
+use App\Models\Appointment;
 use App\Models\Child;
 use App\Models\ClassChild;
 use App\Models\ClassRoom;
@@ -104,17 +105,29 @@ class CourseController extends Controller
             return response()->json($result);
         }
     }
-    public function meetPage()
+    public function meetPage(Request $request)
     {
         $parent = new  ParentUser();
         if(Auth::check()){
             $user = $this->userRepository->find(Auth::user()->id);
             $parent = $this->parentUserRepository->getParentUserByUserId($user->id);
         }
-        return view('client.course.meet',compact('parent'));
+        $course = $this->courseRepository->find($request->course_id);
+        return view('client.course.meet',compact('parent','course'));
     }
     public function createMeet(Request $request)
     {
-
+        $course = $this->courseRepository->find($request->course_id);
+        $parentUser = $this->parentUserRepository->getParentUserByUserId(Auth::user()->id);
+        $meet = new Appointment([
+            'name'=>'Khảo sát chất lượng lớp học ',
+            'description'=>'Khóa học: '.$course->name,
+            'start_date'=> $request->date.' '.$request->time,
+            'status'=>0,
+            'parent_id'=>$parentUser->id,
+        ]);
+        $meet->save();
+        if ($meet) return redirect('/home')->with('message','Tạo mới thành công!');
+        else return back()->with('err','Đã xãy ra lõi!');
     }
 }

@@ -20,6 +20,7 @@ Route::group(['namespace'=>'Client','prefix'=>'/'],function (){
     Route::get('/course', 'CourseController@index');
     Route::get('/course/detail', 'CourseController@courseDetailPage');
     Route::get('/course/meet', 'CourseController@meetPage');
+    Route::post('/course/meet', ['as'=>'course.createMeet','uses'=>'CourseController@createMeet']);
     Route::get('/course/register', 'CourseController@registerCourse');
     Route::post('/course/register',['as' => 'course.register', 'uses' => 'CourseController@register']);
     Route::post('/course/showValueChild', ['as'=>'course.showValueChild','uses'=>'CourseController@showValueChild']);

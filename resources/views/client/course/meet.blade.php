@@ -15,13 +15,13 @@
     </ol>
     <!-- Page -->
     <div class="meet_page">
-        <form action="" method="post">
+        <form action="{{route('course.createMeet')}}" method="post">
             @csrf
             <div class="row reverse">
                 <!-- Image col -->
                 <div class="col-sm-6 col-12">
                     <div class="image_col">
-                        <img src="{{ asset('client/imgs/class1.jpg') }}" alt="img">
+                        <img src="{{ asset('client/imgs/'.$course->image) }}" alt="img">
                     </div>
                 </div>
                 <!-- End Image col -->
@@ -94,19 +94,20 @@
                     </div>
                     <hr>
                     <div class="course_col">
-                        <h3 class="course">Khai giảng lớp Nói trước công chúng – K132</h3>
+                        <h3 class="course">{{$course->title}}</h3>
+                        <input hidden name="course_id" value="{{$course->id}}">
                         <hr>
                         <div class="form-group">
                             <!-- start date -->
 
-                                <h1>Chọn Thời Gian Hẹn</h1>
+                                <h4>Chọn Thời Gian Hẹn</h4>
                                   <label>Date</label>
                                   <div class="input-group date" id="datepicker">
-                                    <input class="form-control" placeholder="MM/DD/YYYY"/><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-calendar"></i></span></span>
+                                    <input name="date" class="form-control" placeholder="MM/DD/YYYY"/><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-calendar"></i></span></span>
                                   </div>
                                   <label>Time</label>
                                   <div class="input-group time" id="timepicker">
-                                    <input class="form-control" placeholder="HH:MM AM/PM"/><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock"></i></span></span>
+                                    <input name="time" class="form-control" placeholder="HH:MM AM/PM"/><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock"></i></span></span>
                                 </div>
 
                             <!-- end date -->

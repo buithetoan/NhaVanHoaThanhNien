@@ -45,7 +45,7 @@
                         <p class="text-danger font-weight-bold">{{$course->discount ? ($course->price - ($course->discount/100)*$course->price) : $course->price }} VND {!! $course->discount ? ('<strike class="text-secondary">'.$course->price.' VNĐ </strike>') : "" !!}</p>
                         <div class="card-button">
                             <a href="{{url('course/register?course_id='.$course->id)}}" class="btn btn-success">Đăng ký khóa học</a>
-                            <a href="{{ url('/course/meet') }}" class="btn btn-outline-success">Đặt lịch hẹn</a>
+                            <a href="{{ url('/course/meet?course_id='.$course->id) }}" class="btn btn-outline-success">Đặt lịch hẹn</a>
                         </div>
                     </div>
                 </div>
