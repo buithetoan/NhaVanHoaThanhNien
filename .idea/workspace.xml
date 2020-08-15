@@ -19,6 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="3e6300d3-8729-4f8f-84af-5b1553bf69c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravelbootstrapdatepicker/bootstrap/cache/packages.php" beforeDir="false" />
@@ -7899,6 +7900,9 @@
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
     </list>
+=======
+    <list default="true" id="3e6300d3-8729-4f8f-84af-5b1553bf69c6" name="Default Changelist" comment="" />
+>>>>>>> Hoinew
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

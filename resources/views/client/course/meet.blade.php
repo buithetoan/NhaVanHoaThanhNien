@@ -97,8 +97,19 @@
                         <h3 class="course">Khai giảng lớp Nói trước công chúng – K132</h3>
                         <hr>
                         <div class="form-group">
-                            <label class="font-weight-bold">Chọn thời gian hẹn</label>
-                            <input type="text"  data-provide="datepicker" class="form-control datepicker">
+                            <!-- start date -->
+                            
+                                <h1>Chọn Thời Gian Hẹn</h1>
+                                  <label>Date</label>
+                                  <div class="input-group date" id="datepicker">
+                                    <input class="form-control" placeholder="MM/DD/YYYY"/><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-calendar"></i></span></span>
+                                  </div>
+                                  <label>Time</label>
+                                  <div class="input-group time" id="timepicker">
+                                    <input class="form-control" placeholder="HH:MM AM/PM"/><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock"></i></span></span>
+                                </div>
+                            
+                            <!-- end date -->
                         </div>
                     </div>
                     <div class="form_submit">
@@ -109,9 +120,11 @@
             </div>
         </form>
     </div>
-    <link rel="stylesheet prefetch" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
-    <script type="text/javascript">
-        $('.datepicker').datepicker();
-    </script>
+    <!-- partial -->
+    <script defer src="{{ asset('client/js/all.js') }}"></script> <!--load all styles -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js'></script>
+<script  src="{{ asset('client/js/script.js') }}"></script>
 @endsection
