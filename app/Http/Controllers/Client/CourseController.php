@@ -88,9 +88,18 @@ class CourseController extends Controller
             foreach ($classChilds as $cc){
                 $arr[] = $cc->class_id;
             }
-            $arrClassChildNotJoin = DB::table('class_room')->whereNotIn('id',$arr)->where('course_id',$request->course_id)->distinct()->get();
+            $course = $this->courseRepository->find($request->course_id);
+            $arrClassChildNotJoin = DB::table('class_room')->whereNotIn('id',$arr)->where('course_id',$course->id)->distinct()->get();
+            $listChillOfClass = $this->classChildRepository->getAll();
+            $arrResultClass = array();
+            foreach ($arrClassChildNotJoin as $room){
+                $request = $room->class_member - $listChillOfClass->where('class_id',$room->id)->count();
+                if ($request>0){
+                    $arrResultClass[] = $room;
+                }
+            }
 
-            $result = [$arrClassChildNotJoin,[$child]];
+            $result = [$arrResultClass,[$child]];
             return response()->json($result);
         }
         else{

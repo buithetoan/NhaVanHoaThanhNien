@@ -103,11 +103,11 @@
                                 <h4>Chọn Thời Gian Hẹn</h4>
                                   <label>Date</label>
                                   <div class="input-group date" id="datepicker">
-                                    <input name="date" class="form-control" placeholder="MM/DD/YYYY"/><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-calendar"></i></span></span>
+                                    <input name="date" required class="form-control" placeholder="MM/DD/YYYY"/><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-calendar"></i></span></span>
                                   </div>
                                   <label>Time</label>
                                   <div class="input-group time" id="timepicker">
-                                    <input name="time" class="form-control" placeholder="HH:MM AM/PM"/><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock"></i></span></span>
+                                    <input name="time" required class="form-control" placeholder="HH:MM AM/PM"/><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock"></i></span></span>
                                 </div>
 
                             <!-- end date -->

@@ -5,20 +5,44 @@
  */
 
 /* Reset */
-body { padding: 0; margin: 0; padding-top: 56px }
+body { padding: 0; margin: 0; padding-top: 111px }
 a { text-decoration: none }
 .footer { background-color: #28822f !important }
 .carousel-item { height: 65vh; min-height: 300px; background: no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover }
 .portfolio-item { margin-bottom: 50px }
-.section_title { border-bottom: 2px solid #28822f; padding-bottom: 13px; margin-bottom: 50px; text-transform: uppercase }
-.section_title a { color: #fff; text-decoration: none; background: #28822f; padding: 15px; font-size: 21px }
 .page-content { margin-bottom: 50px }
 .breadcrumb a { color: #28822f; text-decoration: none }
-.navbar-dark .navbar-nav .nav-link { color: #fff }
 .bg-success { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background: #28822f !important }
+.d-flex-bettwen { display: flex; justify-content: space-between; align-items: center }
+.carousel-item { min-height: 480px }
+
+/* Home Page */
+.section_title { border-bottom: 2px solid #28822f; padding-bottom: 5px; margin-bottom: 70px; text-transform: uppercase }
+.section_title .section_title_box { color: #fff; text-decoration: none; background: #28822f; padding: 15px; font-size: 21px }
+.section_title .section_title_more { color: #777; font-weight: bold; text-transform: uppercase; text-decoration: none }
+.section_title .section_title_more:hover, .section_title .section_title_more:focus, .section_title .section_title_more:active { color: #28822f }
+
+/* Menu Bar */
+.menu-bar { background-color: #fff; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.12) }
+.menu-bar .menu-logo { max-width: 85px }
+.menu-bar .menu-logo a.navbar-brand { margin-right: 0 }
+.menu-bar .menu-logo a.navbar-brand img { width: 100% }
+.menu-bar .navbar-nav .nav-link { color: #777; text-transform: uppercase; font-weight: bold; transition: 0.3s }
+.menu-bar .navbar-nav .nav-link:hover, .menu-bar .navbar-nav .nav-link:focus, .menu-bar .navbar-nav .nav-link:active { color: #28822f }
+.menu-bar .navbar-nav .nav-link::after { margin-top: 5px; content: ''; display: block; width: 0; height: 2px; background: #28822f; transition: width .3s }
+.menu-bar .navbar-nav .nav-link:hover::after { width: 100% }
+
+/* About */
+.about { padding-top: 120px }
+.about .about_title { text-align: center; margin-bottom: 70px; text-transform: uppercase; border-bottom: 2px solid green; padding-bottom: 10px; color: green }
+.about .about_content_box .card { border: 0 }
+.about .about_content_box .card .card-image { max-width: 120px; margin: 0 auto }
+.about .about_content_box .card .card-body { text-align: center }
+.about .about_content_box .card .card-body .card-title { text-transform: uppercase }
+.about .about_content_box .card .card-body .card-text { color: #777 }
 
 /* Van hoa nghe thuat */
-.vhnt { padding-top: 80px }
+.vhnt { padding-top: 120px }
 .vhnt .card { transition: 0.3s }
 .vhnt .card:hover { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border: 1px solid #28822f }
 .vhnt .card-image { min-height: 232px }
@@ -50,10 +74,8 @@ a { text-decoration: none }
 /* Course Page */
 .page-content .breadcrumb { margin-bottom: 35px }
 .class_page .card { box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19) }
-.class_page .card .card-image { min-height: 200px }
 .class_page .card .card-title a { color: #343a40; text-decoration: none; transition: 0.2s }
 .class_page .card .card-title a:hover { color: #28822f }
-.class_page .card .card-text { margin-bottom: 15px }
 .class_page .card .card-text p { color: #777 }
 .class_page .card .card-body { display: flex; flex-wrap: wrap }
 .class_page .card .card-body .card-button { display: flex; align-self: flex-end }
@@ -118,6 +140,6 @@ a { text-decoration: none }
 .client_r_from form a { color: #5cb85c; text-decoration: none }
 .client_r_from form a:hover { text-decoration: underline }
 
-/* Profile Page */
-.profile_page .card { margin-bottom: 50px; border: 1px solid #28822f; transition: 0.3s }
-.profile_page .card:hover { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border: 1px solid #777 }
+/* Mess logo */
+.mess-logo { position: fixed; width: 50px; height: 50px; bottom: 0; right: 0; margin-right: 50px; margin-bottom: 40px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 12px }
+.mess-logo img { width: 100% }

@@ -121,7 +121,7 @@
                         });
                     }else {
                         select.append(
-                            '<option disabled class="text-danger" value="">Học viên này đã tham gia lớp học</option>'
+                            '<option disabled class="text-danger" value="">Hiện không có lớp học nào trống cho khóa học này</option>'
                         );
                     }
                     $.each(childValue, function(key, value){
