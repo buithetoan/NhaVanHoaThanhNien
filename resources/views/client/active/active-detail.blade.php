@@ -36,29 +36,43 @@
             <!-- Sidebar Widgets Column -->
             <div class="col-sm-4 col-12">
                 <div class="sidebar">
-                    <p class="sidebar_title">
-                        <span>Các hoạt động khác</span>
-                    </p>
-                    <div class="sidebar_content">
-                        <!-- Loop -->
-                        @if(count($activities) > 0)
-                            @foreach($activities as $ac)
-                                <div class="sidebar_content_box">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="sidebar_content_box_image">
-                                                <a href="{{ url('/active/detail?active_id='.$ac->id) }}"><img src="{{ asset('images/'.$ac->image) }}" alt="image"></a>
+                    <div class="sidebar_inner">
+                        <p class="sidebar_title">
+                            <span>Các hoạt động khác</span>
+                        </p>
+                        <div class="sidebar_content">
+                            <!-- Loop -->
+                            @if(count($activities) > 0)
+                                @foreach($activities as $ac)
+                                    <div class="sidebar_content_box">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="sidebar_content_box_image">
+                                                    <a href="{{ url('/active/detail?active_id='.$ac->id) }}"><img src="{{ asset('images/'.$ac->image) }}" alt="image"></a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <div class="sidebar_content_box_title">
-                                                <a href="{{ url('/active/detail?active_id='.$ac->id) }}">{!! Illuminate\Support\Str::limit($ac->title, 100) !!}</a>
+                                            <div class="col-sm-8">
+                                                <div class="sidebar_content_box_title">
+                                                    <a href="{{ url('/active/detail?active_id='.$ac->id) }}">{!! Illuminate\Support\Str::limit($ac->title, 100) !!}</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
-                        @endif
+                                @endforeach
+                            @endif
+                        </div>
+                    </div>
+                    <div class="sidebar_banner">
+                        <div class="sidebar_banner_box">
+                            <a href="#" target="_blank">
+                                <img src="{{ asset('images/banner-1.jpg') }}">
+                            </a>
+                        </div>
+                        <div class="sidebar_banner_box">
+                            <a href="#" target="_blank">
+                                <img src="{{ asset('images/banner-2.jpg') }}">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

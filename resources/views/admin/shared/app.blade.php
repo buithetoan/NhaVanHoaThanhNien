@@ -15,13 +15,12 @@
     <link rel="stylesheet" href="{{asset('admin/css/style.css')}}">
     <!-- Responsive Css -->
     <link rel="stylesheet" href="{{asset('admin/css/responsive.css')}}">
+    
 </head>
 <body>
 <!-- // -->
 @yield('content')
 
-<!-- jQuery -->
-<script type="text/javascript" src="{{asset('js/jquery-3.5.1.min.js')}}"></script>
 <!-- Boostrap Js -->
 <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
 <!-- Custom Js -->

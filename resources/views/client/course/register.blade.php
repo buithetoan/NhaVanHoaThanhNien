@@ -72,7 +72,7 @@
                             </select>
                         </div>
                         <div class="card-button">
-                            <button type="submit" class="btn btn-success">Đăng ký khóa học</button>
+                            <button type="submit" class="btn btn-success mr-2">Đăng ký khóa học</button>
                             <a href="{{ url('/course/meet?course_id='.$course->id) }}" class="btn btn-outline-success">Đặt lịch hẹn</a>
                         </div>
                     </form>

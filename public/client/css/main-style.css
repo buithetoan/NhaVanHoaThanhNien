@@ -45,7 +45,8 @@ a { text-decoration: none }
 .vhnt { padding-top: 120px }
 .vhnt .card { transition: 0.3s }
 .vhnt .card:hover { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border: 1px solid #28822f }
-.vhnt .card-image { min-height: 232px }
+.vhnt .card-image { height: 232px }
+.vhnt .card-image img { height: 100% }
 .vhnt .card-body { display: flex; flex-wrap: wrap }
 .vhnt .card-body .card-title a { color: #343a40; text-decoration: none }
 .vhnt .card-body p { color: #777 }
@@ -60,6 +61,8 @@ a { text-decoration: none }
 .post-page-content .post-content-time p { margin: 0 }
 .post-page-content .post-content-desc { margin-bottom: 80px }
 .post-page-content .post-content-desc p:last-child { margin: 0 }
+.post-page-content .sidebar .sidebar_banner { margin-top: 120px }
+.post-page-content .sidebar .sidebar_banner img { margin-top: 50px; width: 100% }
 
 /* Post Side Bar */
 .post-page-content .sidebar .sidebar_title { border-bottom: 2px solid #28822f; padding-bottom: 2px; margin-bottom: 15px; text-transform: uppercase }
@@ -76,11 +79,14 @@ a { text-decoration: none }
 .class_page .card { box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19) }
 .class_page .card .card-title a { color: #343a40; text-decoration: none; transition: 0.2s }
 .class_page .card .card-title a:hover { color: #28822f }
+.class_page .card .card-image { height: 200px }
+.class_page .card .card-image img { height: 100% }
 .class_page .card .card-text p { color: #777 }
 .class_page .card .card-body { display: flex; flex-wrap: wrap }
 .class_page .card .card-body .card-button { display: flex; align-self: flex-end }
 .class_page .card .card-button a { margin-right: 10px }
 .class_page .card .card-button a:last-child { margin-right: 0 }
+
 
 /* Course Detail Page */
 .class_page .card-time p { font-weight: bold }
@@ -143,3 +149,7 @@ a { text-decoration: none }
 /* Mess logo */
 .mess-logo { position: fixed; width: 50px; height: 50px; bottom: 0; right: 0; margin-right: 50px; margin-bottom: 40px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 12px }
 .mess-logo img { width: 100% }
+
+/* Profile Page */
+.profile_page .card { margin-bottom: 50px; border: 1px solid #28822f; transition: 0.3s }
+.profile_page .card:hover { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border: 1px solid #777 }
