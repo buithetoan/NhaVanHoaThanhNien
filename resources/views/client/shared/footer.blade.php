@@ -1,4 +1,4 @@
-<footer class="py-4 footer">
+<footer class="py-2 footer">
     <div class="mess-logo">
         <a href="#">
             <img src="{{ asset('images/mess-logo.png') }}" alt="mess-logo">

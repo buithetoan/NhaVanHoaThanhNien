@@ -1,12 +1,20 @@
 @extends('client.shared.app')
 @section('title', 'Các khóa học ngoại khóa')
 @section('content')
+@if(Session::has('err'))
+    <div id="div-alert" style="position:absolute; right: 10px;" class="float-right mt-2 alert alert-danger alert-dismissible show" role="alert" style="position: absolute;">
+        <strong>{{ Session::get('err') }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    @endif
     <!-- Page title -->
     <h1 class="mt-4 mb-3">Các khóa học ngoại khóa</h1>
     <!-- Breadcrumb -->
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-            <a href="index.html">Home</a>
+            <a href="{{url('/home')}}">Home</a>
         </li>
         <li class="breadcrumb-item active">các khóa học ngoại khóa</li>
     </ol>

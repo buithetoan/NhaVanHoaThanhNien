@@ -74,7 +74,7 @@
                 <div class="col-lg-4 col-sm-6 portfolio-item">
                     <div class="card h-100" data-aos="fade-up">
                         <div class="card-image">
-                            <a href="#"><img class="card-img-top" src="{{ asset('client/imgs/'.$active->image) }}" alt="hd"></a>
+                            <a href="{{url('active/detail?active_id='.$active->id)}}"><img class="card-img-top" src="{{ asset('images/'.$active->image) }}" alt="hd"></a>
                         </div>
                         <div class="card-body">
                             <h4 class="card-title">
@@ -82,7 +82,7 @@
                             </h4>
                             <p class="card-text">{!! Illuminate\Support\Str::limit($active->content, 100) !!}</p>
                             <div class="card-button">
-                                <a href="#" class="btn btn-success">Xem thêm &rarr;</a>
+                                <a href="{{url('active/detail?active_id='.$active->id)}}" class="btn btn-success">Xem thêm &rarr;</a>
                             </div>
                         </div>
                     </div>

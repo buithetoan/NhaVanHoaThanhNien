@@ -116,13 +116,13 @@ class CourseController extends Controller
     }
     public function meetPage(Request $request)
     {
-        $parent = new  ParentUser();
         if(Auth::check()){
             $user = $this->userRepository->find(Auth::user()->id);
-            $parent = $this->parentUserRepository->getParentUserByUserId($user->id);
+            $parent = $this->parentUserRepository->getParentUserByUserId($user->id);           
+            $course = $this->courseRepository->find($request->course_id);
+            return view('client.course.meet',compact('parent','course'));
         }
-        $course = $this->courseRepository->find($request->course_id);
-        return view('client.course.meet',compact('parent','course'));
+        return back()->with('err','Vui lòng đăng nhập!');
     }
     public function createMeet(Request $request)
     {
@@ -136,7 +136,7 @@ class CourseController extends Controller
             'parent_id'=>$parentUser->id,
         ]);
         $meet->save();
-        if ($meet) return redirect('/home')->with('message','Tạo mới thành công!');
+        if ($meet) return back()->with('message','Bạn đã đặt lịch thành công!');
         else return back()->with('err','Đã xãy ra lõi!');
     }
 }

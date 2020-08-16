@@ -1,12 +1,27 @@
 @extends('client.shared.app')
 @section('title', 'Đặt lịch hẹn')
 @section('content')
+@if(Session::has('message'))
+                    <div id="div-alert" style="position:absolute; right: 10px;" class="float-right mt-2 alert alert-success alert-dismissible show" role="alert" style="position: absolute;">
+                        <strong>{{ Session::get('message') }}</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                @elseif(Session::has('err'))
+                    <div id="div-alert" style="position:absolute; right: 10px;" class="float-right mt-2 alert alert-success alert-dismissible show" role="alert" style="position: absolute;">
+                        <strong>{{ Session::get('err') }}</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                @endif
     <!-- Page title -->
     <h1 class="mt-4 mb-3">Đặt lịch hẹn</h1>
     <!-- Breadcrumb -->
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-            <a href="index.html">Home</a>
+            <a href="{{url('/home')}}">Home</a>
         </li>
         <li class="breadcrumb-item">
             <a href="{{ url('/course') }}">các khóa học ngoại khóa</a>
@@ -21,7 +36,7 @@
                 <!-- Image col -->
                 <div class="col-sm-6 col-12">
                     <div class="image_col">
-                        <img src="{{ asset('client/imgs/'.$course->image) }}" alt="img">
+                        <img src="{{ asset('images/'.$course->image) }}" alt="img">
                     </div>
                 </div>
                 <!-- End Image col -->
@@ -121,6 +136,12 @@
             </div>
         </form>
     </div>
+    <script>
+        setTimeout(function() {
+            var element = document.getElementById("div-alert");
+            element.classList.add("fade");
+        }, 2000)
+    </script>
     <!-- partial -->
     <script defer src="{{ asset('client/js/all.js') }}"></script> <!--load all styles -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
