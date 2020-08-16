@@ -36,9 +36,12 @@ class CourseController extends Controller
         $this->childRepository = $childRepos;
         $this->classChildRepository = $classChildRepos;
     }
-    public function index()
+    public function index(Request $request)
     {
         $courses = $this->courseRepository->getAll();
+        if ($request->keyword){
+            $courses = $this->courseRepository->getByKeyword($request->keyword);
+        }
         return view('client.course.course',compact('courses'));
     }
     public function courseDetailPage(Request $request)
@@ -118,7 +121,7 @@ class CourseController extends Controller
     {
         if(Auth::check()){
             $user = $this->userRepository->find(Auth::user()->id);
-            $parent = $this->parentUserRepository->getParentUserByUserId($user->id);           
+            $parent = $this->parentUserRepository->getParentUserByUserId($user->id);
             $course = $this->courseRepository->find($request->course_id);
             return view('client.course.meet',compact('parent','course'));
         }
@@ -139,4 +142,5 @@ class CourseController extends Controller
         if ($meet) return back()->with('message','Bạn đã đặt lịch thành công!');
         else return back()->with('err','Đã xãy ra lõi!');
     }
+
 }

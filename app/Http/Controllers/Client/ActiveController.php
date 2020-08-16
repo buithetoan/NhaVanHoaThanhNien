@@ -14,9 +14,12 @@ class ActiveController extends Controller
     {
         $this->activeRepository = $activeRepos;
     }
-    public function index()
+    public function index(Request $request)
     {
         $activities = $this->activeRepository->getAll();
+        if ($request->keyword){
+            $activities = $this->activeRepository->getByKeyword($request->keyword);
+        }
         return view('client.active.active',compact('activities'));
     }
     public function detail(Request $request)

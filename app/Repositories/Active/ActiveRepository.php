@@ -15,4 +15,8 @@ class ActiveRepository extends EloquentRepository implements ActiveInterface {
     {
         return $this->_model::where('id','!=',$id)->orderBy('start_date','DESC')->take(5)->get();
     }
+    public function getByKeyword($keyword)
+    {
+        return $this->_model::where('name', 'like', '%'.$keyword.'%')->get();
+    }
 }

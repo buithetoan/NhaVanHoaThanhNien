@@ -11,4 +11,8 @@ class CourseRepository extends EloquentRepository implements CourseInterface {
     {
         return \App\Models\Course::class;
     }
+    public function getByKeyword($keyword)
+    {
+        return $this->_model::where('name', 'like', '%'.$keyword.'%')->get();
+    }
 }

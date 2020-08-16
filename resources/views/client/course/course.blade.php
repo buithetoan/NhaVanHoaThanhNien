@@ -20,6 +20,12 @@
     </ol>
     <!-- Page -->
     <div class="class_page">
+        <div class="search-course">
+            <form action="{{url('course')}}" method="GET" class="row col-md-12 mb-4">
+                <input class="form-control col-md-3" value="{{old('keyword')}}" name="keyword" placeholder="Search here..." type="text">
+                <button class="ml-2 btn btn-success" type="submit"> Search</button>
+            </form>
+        </div>
         <div class="row">
         @foreach($courses as $key => $course)
             <!-- Loop -->
