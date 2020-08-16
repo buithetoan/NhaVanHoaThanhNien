@@ -98,14 +98,15 @@ class ActiveController extends Controller
      */
     public function update(ActiveRequest $request, $id)
     {
-        if($request->hasFile('image'))
+        if($request->hasFile('url_image'))
         {
             $imagename=$request->url_image->getClientOriginalName();
             $request->url_image->move('images', $imagename);
-        } else $imagename = $request->url_image;
+        } else $imagename = $request->image;
         $active = $this->activeRepository->find($id);
         $active->name = $request->name;
         $active->title = $request->title;
+        $active->image = $imagename;
         $active->content = $request->txtContent;
         $active->start_date = $request->start_date;
         $active->end_date = $request->end_date;

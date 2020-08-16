@@ -54,6 +54,7 @@ class CourseController extends Controller
             $nameimage=$request->url_image->getClientOriginalName();
             $request->url_image->move('images', $nameimage);
         }
+
         $data = new Course([
             'name' => $request->name,
             'title' => $request->title,
@@ -102,16 +103,17 @@ class CourseController extends Controller
      */
     public function update(CourseRequest $request, $id)
     {
-        if($request->hasFile('image'))
+        if($request->hasFile('url_image'))
         {
             $imagename=$request->url_image->getClientOriginalName();
             $request->url_image->move('images', $imagename);
-        } else $imagename = $request->url_image;
+        } else $imagename = $request->image;
         $course = $this->courseRepository->find($id);
         $course->name = $request->name;
         $course->title = $request->title;
         $course->content = $request->txtContent;
         $course->maximum_student = $request->maximum_student;
+        $course->image = $imagename;
         $course->price = $request->price;
         $course->discount = $request->discount;
         $course->start_date = $request->start_date;
