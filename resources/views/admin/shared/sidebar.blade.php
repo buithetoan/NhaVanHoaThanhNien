@@ -25,4 +25,10 @@
     <li class="list_item">
         <a class="item_link" href="{{ route('parent.index') }}">Phụ huynh</a>
     </li>
+    <li class="list_item">
+        <a class="item_link" href="{{ route('user.index') }}">Quản lý người dùng</a>
+    </li>
+    <li class="list_item">
+        <a class="item_link" href="{{ route('role.index') }}">Phân quyền</a>
+    </li>
 </ul>
